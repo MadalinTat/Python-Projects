@@ -1,0 +1,9 @@
+
+def sort_words(a_string):
+    w = a_string.split(" ")
+    s = sorted(w, key=str.casefold)
+    return ' '.join(s)
+
+
+a = input("Write: ")
+print(sort_words(a))
