@@ -1,0 +1,12 @@
+def get_prime_factors(number):
+  factors = []
+  div = 2
+  while div <= number:
+    if number % div == 0:
+      factors.append(div)
+      number = number // div
+    else:
+      div+1
+  return factors
+
+print(get_prime_factors(int(input("Number: "))))
