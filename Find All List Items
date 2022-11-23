@@ -1,0 +1,15 @@
+def index_all(the_list, number):
+
+    indices_list = []
+    for index, value in enumerate(the_list):
+        if value == number:
+            indices_list.append([index])
+        elif isinstance(the_list[index], list):
+          for i in index_all(the_list[index], number):
+              indices_list.append([index]+i)
+    return indices_list
+
+
+a_list = [[1, 2, 3, 4], [2, 6], 6, [6, 2], 1]
+
+print(index_all(a_list, 6))
