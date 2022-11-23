@@ -1,0 +1,25 @@
+import random
+import time
+
+def reaction_time():
+
+    goal_time = random.randint(2, 8)
+    print(f'Your target time is is {goal_time} seconds')
+
+    input("~~~ Press Enter to START ~~~")
+    start = time.perf_counter()
+
+    input(f'\n!Press Enter after {goal_time} passed!')
+    time_elapsed = time.perf_counter() - start
+
+    print(f'\nElapsed time: {time_elapsed :.3f} seconds')
+
+    if time_elapsed == goal_time:
+        print("Good job! Perfect timing!")
+    elif time_elapsed < goal_time:
+        print(f'{goal_time - time_elapsed :.3f} seconds too fast')
+    else:
+        print(f'{time_elapsed - goal_time :.3f} seconds too slow')
+
+
+reaction_time()
