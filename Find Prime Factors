@@ -1,4 +1,5 @@
 def get_prime_factors(number):
+
   factors = []
   div = 2
   while div <= number:
@@ -8,5 +9,5 @@ def get_prime_factors(number):
     else:
       div+1
   return factors
-
+  
 print(get_prime_factors(int(input("Number: "))))
